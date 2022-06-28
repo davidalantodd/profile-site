@@ -1,53 +1,182 @@
+
+/* ------------ HEADER ------------ */
 header{
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: space-between;
     align-items: center;
-   /* height:120px;*/
-    
+    height:0px;
+    margin:0px;
 }
 
 .header{
-    padding: 1rem;
+   padding: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
 }
 
 h1.header{
-    background-image:url(https://www.islands.com/wp-content/uploads/sites/13/2021/09/cayman-islands-seven-mile-beach-shutterstock-1.jpg);
-    background-size:auto;
-    background-position: 50%;
-    font-size: 5.5rem;
+    font-size: 4rem;
     margin: 0;
+    padding: 1rem;
     font-weight:bold;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    background-clip:border-box;
+
+    /*fill text with picture */
     -webkit-background-clip: text;
     -webkit-text-fill-color:transparent;
 
-}
+    background-image:url(pictures/seven-mile-beach.png);
+    background-size:cover;
+    background-origin: border-box;
+    background-position-y: 105%;
 
-body, main {
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction:column;
 }
 
 
 a {
     font-weight:bold;
     text-decoration:none;
-    color:rgb(0, 204, 207)
+    color:rgb(56, 212, 202);
 }
 
 a:hover{
-    color:coral;
+    color:rgb(246,243,236);
 }
 
-@media screen and (max-width:750px){
+/* ------------ MAIN ------------ */
+
+
+/* ------------ BIO/EXP/PORT. ------------ */
+
+.words{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+h1.bio, h1.experience, h1.portfolio {
+    
+    font-size: 5rem;
+    width:400px;
+    height:120px;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    
+    /*setting transparent text against picture background */
+    
+
+    background-size: cover;
+    background-origin:border-box;
+    background-position: 40%;
+    background-position-y: 40%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 2rem;
+
+    
+}
+
+h1.bio {
+    background-image:url(pictures/music.jpeg);
+    background-position-y:20%;
+}
+
+h1.experience {
+    background-image:url(pictures/computer\ science.jpeg);
+    background-position-y:50%;
+}
+
+h1.portfolio {
+    background-image:url(pictures/galaxy.jpeg);
+    background-position-y:50%;
+}
+
+
+h1.bio:hover, h1.experience:hover, h1.portfolio:hover{
+    /*-webkit-text-fill-color:rgba(255, 255, 255);
+    -webkit-background-clip:border-box;*/
+    opacity: 0.5;
+    transition: opacity 2s;
+    
+    /*opacity: 1;*/
+   
+   
+    
+
+}
+
+/* ------------ ABOUT BAR ------------ */
+
+
+.about {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(246,243,236);
+    min-height: 275px;
+    margin-top:150px;
+}
+
+.aboutText{
+    color:rgb(103, 103, 103);
+    padding-left: 20px;
+    width: 450px;
+    /*max-inline-size:40vw;*/
+
+}
+
+.about img{
+    height: 250px;
+    border-radius: 10rem;
+}
+
+
+
+
+/* ------------ RESPONSIVE DESIGN ------------ */
+
+@media screen and (max-width:900px){
     header{
         flex-direction:column;
         justify-content:flex-start;
+        width:vw;
     }
 
+    h1.header {
+        font-size:3rem;
+    }
 
+    main .about {
+        padding: 2rem;
+        text-align:center;
+    }
+    
+    .aboutText {
+        max-inline-size:100vw;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    h1.aboutText  {
+        font-size:2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1.bio, h1.experience, h1.portfolio {
+        font-size: 6rem;
+        width:100vw;
+        height:200px;
+    }
 }

@@ -275,3 +275,61 @@ footer img:hover{
         padding:0rem;
     }
 }
+
+/* ------------ RESPONSIVE DESIGN MOBILE ------------ */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    header{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        padding:.5rem;
+    }
+
+    h1.header {
+        font-size:3rem;
+    }
+
+    nav a {
+        font-size:1rem;
+    }
+
+    main .about {
+        padding: 2rem;
+        text-align:center;
+    }
+    
+    .aboutText {
+        max-inline-size:100vw;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    h1.aboutText  {
+        font-size:2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1.bio, h1.experience, h1.portfolio {
+        font-size: 4rem;
+        
+    }
+    h1.subpagecard {
+        font-size: 4rem;
+        
+    }
+    .words{
+        padding:2rem;
+    }
+    .card {
+        width:100vw;
+        height:300px;
+    }
+
+    .subpagecard {
+        width:100vw;
+        height:200px;
+        padding:0rem;
+    }
+}
